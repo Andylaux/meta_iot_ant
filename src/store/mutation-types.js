@@ -1,4 +1,8 @@
 export const ACCESS_TOKEN = 'Access-Token'
+<<<<<<< HEAD
+=======
+export const AUTHORIZATION = 'Authorization'
+>>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
 
 export const SIDEBAR_TYPE = 'sidebar_type'
 export const TOGGLE_MOBILE_TYPE = 'is_mobile'

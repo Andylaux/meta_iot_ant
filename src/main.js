@@ -17,9 +17,15 @@ import './mock'
 
 import bootstrap from './core/bootstrap'
 import './core/lazy_use' // use lazy load components
+<<<<<<< HEAD
 import './permission' // permission control
 import './utils/filter' // global filter
 import './global.less' // global style
+=======
+// import './permission' // permission control
+import './utils/filter' // global filter
+import './global.less'
+>>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
 
 Vue.config.productionTip = false
 

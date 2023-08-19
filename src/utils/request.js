@@ -1,9 +1,17 @@
 import axios from 'axios'
 import store from '@/store'
+<<<<<<< HEAD
 import storage from 'store'
 import notification from 'ant-design-vue/es/notification'
 import { VueAxios } from './axios'
 import { ACCESS_TOKEN } from '@/store/mutation-types'
+=======
+// eslint-disable-next-line no-unused-vars
+import storage from 'store'
+import notification from 'ant-design-vue/es/notification'
+import { VueAxios } from './axios'
+import { AUTHORIZATION } from '@/store/mutation-types'
+>>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
 
 // 创建 axios 实例
 const request = axios.create({
@@ -17,7 +25,11 @@ const errorHandler = (error) => {
   if (error.response) {
     const data = error.response.data
     // 从 localstorage 获取 token
+<<<<<<< HEAD
     const token = storage.get(ACCESS_TOKEN)
+=======
+    const token = storage.get(AUTHORIZATION)
+>>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
     if (error.response.status === 403) {
       notification.error({
         message: 'Forbidden',
@@ -43,11 +55,19 @@ const errorHandler = (error) => {
 
 // request interceptor
 request.interceptors.request.use(config => {
+<<<<<<< HEAD
   const token = storage.get(ACCESS_TOKEN)
   // 如果 token 存在
   // 让每个请求携带自定义 token 请根据实际情况自行修改
   if (token) {
     config.headers[ACCESS_TOKEN] = token
+=======
+  const token = sessionStorage.getItem(AUTHORIZATION)
+  // 如果 token 存在
+  // 让每个请求携带自定义 token 请根据实际情况自行修改
+  if (token) {
+    config.headers['Authorization'] = token
+>>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
   }
   return config
 }, errorHandler)

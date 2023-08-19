@@ -10,7 +10,13 @@ const userApi = {
   SendSmsErr: '/account/sms_err',
   // get my info
   UserInfo: '/user/info',
+<<<<<<< HEAD
   UserMenu: '/user/nav'
+=======
+  UserMenu: '/user/nav',
+  accessToken: '/token-api/token/',
+  myProfile: '/rest-auth/myprofile/'
+>>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
 }
 
 /**
@@ -78,3 +84,23 @@ export function get2step (parameter) {
     data: parameter
   })
 }
+<<<<<<< HEAD
+=======
+
+// get access token
+export function getAccessToken (parameter) {
+  return request({
+      url: userApi.accessToken,
+      method: 'post',
+      data: parameter
+  })
+}
+
+// get user profile
+export function getMyProfile () {
+  return request({
+    url: userApi.myProfile,
+    method: 'get'
+  })
+}
+>>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
