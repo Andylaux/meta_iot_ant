@@ -53,18 +53,10 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import { SettingDrawer, updateTheme } from '@ant-design-vue/pro-layout'
 import { i18nRender } from '@/locales'
 import { mapState } from 'vuex'
 import { CONTENT_WIDTH_TYPE, SIDEBAR_TYPE, TOGGLE_MOBILE_TYPE } from '@/store/mutation-types'
-=======
-import { asyncRouterMap } from '@/config/router.config.js'
-import { SettingDrawer, updateTheme } from '@ant-design-vue/pro-layout'
-import { i18nRender } from '@/locales'
-import { mapState } from 'vuex'
-import { CONTENT_WIDTH_TYPE } from '@/store/mutation-types'
->>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
 
 import defaultSettings from '@/config/defaultSettings'
 import RightContent from '@/components/GlobalHeader/RightContent'
@@ -120,7 +112,6 @@ export default {
       mainMenu: state => state.permission.addRouters
     })
   },
-<<<<<<< HEAD
   created () {
     const routes = this.mainMenu.find(item => item.path === '/')
     this.menus = (routes && routes.children) || []
@@ -132,24 +123,6 @@ export default {
       this.$store.commit(TOGGLE_MOBILE_TYPE, this.isMobile)
     })
   },
-=======
-  // created () {
-  //   const routes = this.mainMenu.find(item => item.path === '/')
-  //   this.menus = (routes && routes.children) || []
-  //   // 处理侧栏收起状态
-  //   this.$watch('collapsed', () => {
-  //     this.$store.commit(SIDEBAR_TYPE, this.collapsed)
-  //   })
-  //   this.$watch('isMobile', () => {
-  //     this.$store.commit(TOGGLE_MOBILE_TYPE, this.isMobile)
-  //   })
-  // },
-  created () {
-    const routes = asyncRouterMap.find((item) => item.path === '/')
-    // const routes = this.mainMenu.find((item) => item.path === '/')
-    this.menus = (routes && routes.children) || []
-},
->>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
   mounted () {
     const userAgent = navigator.userAgent
     if (userAgent.indexOf('Edge') > -1) {

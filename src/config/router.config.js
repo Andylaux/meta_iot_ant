@@ -15,32 +15,6 @@ export const asyncRouterMap = [
     meta: { title: 'menu.home' },
     redirect: '/dashboard/workplace',
     children: [
-<<<<<<< HEAD
-=======
-      // Device management module
-      {
-        path: '/device',
-        name: 'device',
-        redirect: '/device/template',
-        component: RouteView,
-        meta: { title: '设备管理', keepAlive: true, icon: 'laptop' },
-        children: [
-          {
-            path: '/device/template',
-            name: 'deviceTemplate',
-            component: () => import('@/views/device/Template'),
-            meta: { title: '设备模板', keepAlive: true }
-          },
-          {
-            path: '/device/template/detail',
-            hidden: true,
-           name: 'templateDetail',
-            component: () => import('@/views/device/TemplateDetail.vue'),
-            meta: { title: '模板详情', keepAlive: true }
-          }
-    ]
-      },
->>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
       // dashboard
       {
         path: '/dashboard',
@@ -383,15 +357,6 @@ export const constantRouterMap = [
         component: () => import(/* webpackChunkName: "user" */ '@/views/user/Login')
       },
       {
-<<<<<<< HEAD
-=======
-        path: 'iotlogin',
-        name: 'iotlogin',
-        component: () => import(/* webpackChunkName: "user" */ '@/views/user/iotLogin')
-      },
-
-      {
->>>>>>> 8b0f70bb001c1fc63a863a8cd625cbc85118d4b3
         path: 'register',
         name: 'register',
         component: () => import(/* webpackChunkName: "user" */ '@/views/user/Register')
